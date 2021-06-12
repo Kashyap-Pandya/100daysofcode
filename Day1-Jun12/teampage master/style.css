@@ -1,0 +1,144 @@
+:root {
+  /* Fonts Weights*/
+
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+  /* Sub Fonts */
+
+  --subfont: "PT Serif", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 3rem 2rem;
+}
+
+span{
+  color:rgb(235, 235, 70);
+}
+
+hr {
+    height:0.2rem;
+    background-color:yellow;
+    border:none;
+}
+
+.text-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--subfont);
+}
+
+h2,
+.lightpara {
+  font-family: "Poppins";
+  font-weight: var(--medium);
+}
+
+.gallary {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-top: 8rem;
+  width: 80%;
+}
+
+img {
+  width: 80%;
+}
+
+.img {
+  display: flex;
+}
+
+.img p {
+ margin-left:0.5rem;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-family: var(--subfont);
+}
+
+.name {
+    font-weight: var(--bold);
+    font-size: 1.5rem;
+    padding-top:.7rem;
+  }
+
+  .person2 {
+      padding-top: 4rem;
+  }
+
+  .person5 {
+      padding-top: 6rem;
+  }
+
+
+  /* media query */ 
+
+  @media only screen and (max-width: 450px) {
+    .gallary {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 300px);
+    }
+  
+    .img p {
+      font-size: 0.6rem;
+      margin-left:0.1rem;
+    }
+  
+    .text-content{
+        display: block;
+        width: 80%;
+    }
+  
+    .para{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .person2 {
+        padding-top: 2rem;
+    }
+    
+    .person5 {
+        padding-top: 2rem;
+    }
+    
+    .name {
+        font-size: 1rem;
+    }
+
+  }
+
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    color: rgb(187, 184, 184);
+    font-size:0.7rem;
+  }
+  
+  @media only screen and (max-width: 550px) and (max-height:730px) {
+      .img p {
+          margin-left: 0.1rem;
+          font-size: 0.6rem;
+      }
+
+      .name {
+        font-size: 1rem;
+    }
+  }
