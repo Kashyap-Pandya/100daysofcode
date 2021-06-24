@@ -1,7 +1,26 @@
 :root{
 
+        /* Font */
+        --navpfont: 'Montserrat', sans-serif;
+
+        --headfont: 'Lora', serif;
+
+        --logofont: 'Crimson Pro', serif;
+
+
+        /*font-weight */
+        --light: 200;
+        --regular: 400;
+        --medium: 500;
+        --bold:700;
+
 }
 
+body{
+    background-color: black;
+    color:white;
+    
+}
 
 * {
   padding: 0;
@@ -10,12 +29,17 @@
 }
 
 .container {
-  margin: 30px;
+  margin: 70px;
+  border: 1px solid orangered;
+}
+
+.main {
+    margin: 0 auto;
 }
 
 .navbar {
   display: flex;
-  border: 1px red solid;
+   border: 1px red solid;
   justify-content: space-between;
 }
 
@@ -27,10 +51,116 @@
 
 ul li {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 3rem;
 }
 
 a {
   text-decoration: none;
+  font-family: var(--navpfont);
+  font-weight: var(--bold);
+  font-size: 1.3rem;
 }
 
+a:hover{
+    border-bottom: 1px solid white;
+    border-collapse: separate;
+    border-spacing: 50px;
+    padding-bottom:0.7rem;
+}
+
+.logo {
+    font-family: var(--logofont);
+    border:1px solid white;
+    color:white;
+    padding: 0.7rem;
+    letter-spacing:2px;
+    font-size: 0.9rem;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    border:1px solid red;
+    margin-top: 7rem;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.texthead {
+    font-size: 3rem;
+}
+
+.para {
+    font-size:1.5rem;
+    padding-top:2.5rem;
+    padding-bottom: 2.5rem;;
+}
+
+.button span {
+    font-size: 1.3rem;
+    margin-right:0.5rem;
+}
+
+.hero-img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+.person{
+position: absolute;
+width: 510px;
+height: 250px;
+background-color:black;
+right:200px;
+bottom: -500px;
+padding:30px;
+border:1px solid blue;
+
+}
+
+.img2{
+    width:20%;
+    border-radius: 50%;
+}
+
+.personflex {
+    display: flex;
+    align-items: center;
+}
+
+.persondetail{
+    margin-left:20px;
+    text-align: center;
+}
+
+.personname{
+    font-family: var(--navpfont);
+    font-weight: var(--medium);
+    font-size:1.2rem;
+}
+
+.personrole {
+    padding-top:10px;
+    text-align: center;
+    font-size:0.9rem;
+    font-family: var(--navpfont);
+    font-weight: var(--regular);
+    color:#828282;
+
+
+}
+
+.personpara {
+    margin-top:30px;
+    font-size:1.5rem;
+    font-family:var(--headfont);
+    font-size:1.6rem;
+    font-weight: var(--bold);
+    
+}
