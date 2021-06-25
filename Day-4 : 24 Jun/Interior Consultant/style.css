@@ -30,7 +30,7 @@ body{
 
 .container {
   margin: 70px;
-  border: 1px solid orangered;
+
 }
 
 .main {
@@ -39,7 +39,7 @@ body{
 
 .navbar {
   display: flex;
-   border: 1px red solid;
+
   justify-content: space-between;
 }
 
@@ -59,6 +59,7 @@ a {
   font-family: var(--navpfont);
   font-weight: var(--bold);
   font-size: 1.3rem;
+  color: white;
 }
 
 a:hover{
@@ -78,21 +79,29 @@ a:hover{
 }
 
 .main {
-    display: flex;
-    justify-content: space-between;
-    border:1px solid red;
-    margin-top: 7rem;
+    /* display: flex;
+    justify-content: space-evenly;
+    margin-top: 7rem; */
+        display: grid;
+        margin-top: 7rem;
+        grid-template-columns: 1fr 2fr;
 }
 
 .text{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content:center; */
+    margin-top:7rem;
+
 }
 
 .texthead {
     font-size: 3rem;
 }
+
+p span {
+    color:yellow;
+} 
 
 .para {
     font-size:1.5rem;
@@ -103,24 +112,34 @@ a:hover{
 .button span {
     font-size: 1.3rem;
     margin-right:0.5rem;
+    cursor: pointer;
+    padding:1rem;
 }
 
-.hero-img{
-    max-width: 100%;
+.button span:hover{
+    border: 1px solid yellow;
+}
+
+.hero-img {
+    display: flex;
+    justify-content: flex-end;
+}
+.img1{
+    max-width: 90%;
     height: auto;
     object-fit: cover;
     position: relative;
 }
 
 .person{
+
 position: absolute;
-width: 510px;
-height: 250px;
-background-color:black;
-right:200px;
-bottom: -500px;
-padding:30px;
-border:1px solid blue;
+width: 450px;
+height: 219px;
+background-color: black;
+right: 100px;
+top: 673px;
+padding: 30px;
 
 }
 
@@ -147,7 +166,7 @@ border:1px solid blue;
 
 .personrole {
     padding-top:10px;
-    text-align: center;
+    text-align: start;
     font-size:0.9rem;
     font-family: var(--navpfont);
     font-weight: var(--regular);
