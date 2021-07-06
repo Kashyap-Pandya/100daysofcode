@@ -3,7 +3,7 @@
   --suvs-cyan: hsl(184, 100%, 22%);
   --luxury-dark-cyan: hsl(179, 100%, 13%);
 
-  --para-text: hsla(0, 0%, 100%, 0.75);
+  --para-text: hsl(0, 0%, 100%);
   --buttons-gray: hsl(0, 0%, 95%);
 
   /*Font family*/
@@ -19,7 +19,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 15px;
 }
 
 section {
@@ -33,6 +32,8 @@ section {
   height: 100vh;
 }
 
+
+
 .sedans,
 .suvs,
 .luxury {
@@ -41,7 +42,7 @@ section {
   align-items: flex-start;
   justify-content: space-evenly;
   width: 350px;
-  height: 500px;
+  height: 550px;
   padding: 20px 40px;
 }
 
@@ -60,7 +61,7 @@ section {
 .car {
   font-family: var(--car-font);
   font-weight: var(--bold-header);
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 .car {
@@ -68,48 +69,49 @@ section {
 }
 
 .car-intro {
-  color: var(--buttons-gray);
+  color: var(--para-text);
   word-spacing: 4px;
   font-family: var(--car-para);
   font-weight: var(--regular);
 }
 
 .button {
-  width: 140px;
+  width: 150px;
   height: 50px;
   border-radius: 40px;
-background-color: var(--para-text);
+ background-color: var(--para-text);
+background-color: white;
+ border:0;
   display: inline-block;
-   border:3px solid var(--buttons-gray);
   padding-top: 15px;
   text-align: center;
   font-weight: var(--bold-header);
- 
-}
+margin-top:80px;
 
-a:visited {
-    color: green;
+ 
 }
 
 a {
   text-decoration: none;
   font-weight: var(--bold-header);
-  /* color: var(--para-text); */
 }
 
 #sedans {
   color: var(--sedans-orange);
   background-color: var(--para-text);
+  border:3px solid var(--buttons-gray);
 }
 
 #suvs {
   color: var(--suvs-cyan);
   background-color: var(--para-text);
+  border:3px solid var(--buttons-gray);
 }
 
 #luxury {
   color: var(--luxury-dark-cyan);
   background-color: var(--para-text);
+  border:3px solid var(--buttons-gray);
 }
 
 /* on active state */
@@ -130,11 +132,18 @@ a {
 }
 
 
+footer {
+    text-align: center;
+    font-weight:var(--regular);
+    font-family: var(--car-para);
+}
+
 @media only screen and (max-width: 750px) {
   section {
       margin: 0 auto;
       display:flex;
       justify-content:center;
+    
   }
   
     .main {
@@ -142,9 +151,13 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: auto;
-    /* width:375px; */
-    width:100vw;
+    width:100%;
+    height:auto;
+    
+  }
+
+  footer{
+      margin-top: 30px;
   }
 }
 
@@ -163,7 +176,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: auto;
     height: 600px;
     padding: 20px 40px;
