@@ -1,0 +1,115 @@
+:root {
+
+--body-background : hsl(233, 47%, 7%);
+--card-background:  hsl(244, 38%, 16%);
+--accent : hsl(277, 64%, 61%);
+
+
+--heading-white: hsl(0,0%,100%);
+--transparent-white-para:hsla(0, 0%, 100%, 0.75);
+--transparent-white-heading:hsla(0, 0%, 100%, 0.6);
+
+--heading-text : 'Inter', sans-serif;
+--para-text::'Lexend Deca', sans-serif;
+--bold: 700;
+--regular: 400;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: var(--body-background);
+  width: 100%;
+  height:100vh;
+ 
+}
+
+section {
+    margin:0 auto;  
+}
+
+img {
+    width:100%;
+    height:auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+
+   section {
+        height:115vh;
+        width:100%;
+    }
+
+    .main {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        height:auto;
+        margin: 90px 20px;
+        background-color: var(--card-background);
+        border-radius:10px;
+        
+    }
+
+    .main-head {
+        margin-top:30px;
+    }
+
+    h1{
+        text-align: center;
+        font-family: var(--heading-text);
+        color: var(--heading-white);
+        font-weight: var(--bold);
+        word-spacing: 3px;
+        font-size: 1.9rem;
+    }
+
+    span {
+        color: var(--accent);
+    }
+
+    .para {
+        margin-top:25px;
+        text-align: center;
+        color: var(--transparent-white-para);
+        font-family: var(--heading-text);
+        font-size: 1rem;
+        font-weight: var(--regular);
+    }
+
+    .social-stats {
+        margin-top: 40px;
+        text-align: center;
+        /* display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center; */
+    }
+
+    .companies,.templates,.queries {
+        padding-bottom: 30px;
+    }
+
+    .num {
+        margin-bottom: 10px;
+        color: var(--heading-white);
+    }
+
+    .social-stats p {
+        color: var(--transparent-white-heading);
+        font-family: var(--para-text);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing:2px;
+    }
+   
+}
