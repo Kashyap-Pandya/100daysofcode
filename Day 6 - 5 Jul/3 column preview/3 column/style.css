@@ -1,171 +1,171 @@
 :root {
-    --sedans-orange: hsl(31, 77%, 52%);
-    --suvs-cyan: hsl(184, 100%, 22%);
-    --luxury-dark-cyan: hsl(179, 100%, 13%);
+  --sedans-orange: hsl(31, 77%, 52%);
+  --suvs-cyan: hsl(184, 100%, 22%);
+  --luxury-dark-cyan: hsl(179, 100%, 13%);
 
-    --para-text: hsla(0, 0%, 100%, 0.75);
-    --buttons-gray: hsl(0, 0%, 95%);
+  --para-text: hsla(0, 0%, 100%, 0.75);
+  --buttons-gray: hsl(0, 0%, 95%);
 
+  /*Font family*/
 
-    /*Font family*/
+  --car-font: "Big Shoulders Display";
+  --bold-header: 700;
 
-    --car-font: 'Big Shoulders Display';
-    --bold-header: 700;
-
-    --car-para: 'Lexend Deca';
-    --regular: 400;
-
+  --car-para: "Lexend Deca";
+  --regular: 400;
 }
 
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 15px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 15px;
 }
 
 section {
-    margin: 0 50%
+  margin: 0 50%;
 }
 
 .main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-content: center;
-    height: 100vh;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  height: 100vh;
 }
 
 .sedans,
 .suvs,
 .luxury {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    width: 350px;
-    height: 500px;
-    padding: 20px 40px;
-
-
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 500px;
+  padding: 20px 40px;
 }
 
-
-
 .sedans {
-    background-color: var(--sedans-orange);
+  background-color: var(--sedans-orange);
 }
 
 .suvs {
-    background-color: var(--suvs-cyan);
+  background-color: var(--suvs-cyan);
 }
 
 .luxury {
-    background-color: var(--luxury-dark-cyan);
+  background-color: var(--luxury-dark-cyan);
 }
 
 .car {
-    font-family: var(--car-font);
-    font-weight: var(--bold-header);
-    font-size: 2rem;
+  font-family: var(--car-font);
+  font-weight: var(--bold-header);
+  font-size: 2rem;
 }
 
-
 .car {
-    color: var(--para-text);
+  color: var(--para-text);
 }
 
 .car-intro {
-    color: var(--buttons-gray);
-    word-spacing: 4px;
-    font-family: var(--car-para);
-    font-weight: var(--regular);
+  color: var(--buttons-gray);
+  word-spacing: 4px;
+  font-family: var(--car-para);
+  font-weight: var(--regular);
 }
 
-button {
-    width: 180px;
-    height: 50px;
-    border-radius: 40px;
-    border-color: var(--buttons-gray);
-    border: 3px solid white;
+.button {
+  width: 140px;
+  height: 50px;
+  border-radius: 40px;
+background-color: var(--para-text);
+  display: inline-block;
+   border:3px solid var(--buttons-gray);
+  padding-top: 15px;
+  text-align: center;
+  font-weight: var(--bold-header);
+ 
 }
 
-
-.learn-more-sedans a {
-    color: var(--sedans-orange);
+a:visited {
+    color: green;
 }
 
-.learn-more-suvs a {
-    color: var(--suvs-cyan);
+a {
+  text-decoration: none;
+  font-weight: var(--bold-header);
+  /* color: var(--para-text); */
 }
 
-.learn-more-luxury a {
-    color: var(--luxury-dark-cyan);
+#sedans {
+  color: var(--sedans-orange);
+  background-color: var(--para-text);
+}
+
+#suvs {
+  color: var(--suvs-cyan);
+  background-color: var(--para-text);
+}
+
+#luxury {
+  color: var(--luxury-dark-cyan);
+  background-color: var(--para-text);
 }
 
 /* on active state */
 
-a:active {
-    color: var(--para-text);
-    cursor: pointer;
-}
-
-.learn-more-sedans:active {
+#sedans:active {
     background-color: var(--sedans-orange);
-}
-
-.learn-more-suvs:active {
-    background-color: var(--suvs-cyan);
-}
-
-.learn-more-luxury:active {
-    background-color: var(--luxury-dark-cyan);
-}
-
-a {
-    text-decoration: none;
-    font-weight: var(--bold-header);
     color: var(--para-text);
+}
 
+#suvs:active {
+    background-color: var(--suvs-cyan);
+    color: var(--para-text); 
+}
+
+#luxury:active {
+    background-color: var(--luxury-dark-cyan);
+    color: var(--para-text); 
 }
 
 
 @media only screen and (max-width: 750px) {
-
-
+  section {
+      margin: 0 auto;
+      display:flex;
+      justify-content:center;
+  }
+  
     .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: auto;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+    /* width:375px; */
+    width:100vw;
+  }
 }
 
-@media only screen and (max-width:1080px) {
-    body {
-        background-color: pink;
-    }
-
-    .main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+@media only screen and (max-width: 1080px) {
 
 
-    .sedans,
-    .suvs,
-    .luxury {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        width: 350px;
-        height: 500px;
-        padding: 20px 40px;
+  section {
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+}
 
-
-    }
+ .sedans,
+  .suvs,
+  .luxury {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: auto;
+    height: 600px;
+    padding: 20px 40px;
+  }
 }
