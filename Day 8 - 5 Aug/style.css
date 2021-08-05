@@ -128,13 +128,15 @@ img {
   height: 45px;
 }
 
+footer {
+  text-align: center;
+  margin-top:20px;
+}
+
 /* media query*/
 
 @media only screen and (max-width: 540px) {
-  body {
-    /* width: 60%;  */
-    background-color: pink;
-  }
+ 
 
   .grid-wrapper {
     display: flex;
@@ -158,7 +160,7 @@ img {
 @media only screen and (min-width: 1300px) and (max-width: 1370px) {
   body {
     width: 100%;
-    background-color: cadetblue;
+   
   }
 }
 
@@ -166,7 +168,7 @@ img {
 
 @media only screen and (min-width: 740px) and (max-width: 1030px) {
   body {
-    background-color: darksalmon;
+  
     width: 100%;
   }
 
