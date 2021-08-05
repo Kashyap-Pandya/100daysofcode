@@ -1,11 +1,4 @@
-:root {
-  primary-violet: hsl(263, 55%, 52%);
-  primary-dark-grayish-blue: hsl(217, 19%, 35%);
-  primary-dark-blackish-blue: hsl(219, 29%, 14%);
 
-  neutral-semi: hsl(0, 0%, 81%);
-  neutral-head: hsl(210, 46%, 95%);
-}
 
 * {
   padding: 0px;
